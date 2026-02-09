@@ -5,6 +5,7 @@ import pl.feature.toggle.service.contracts.shared.IntegrationEvent;
 import lombok.Builder;
 import pl.feature.toggle.service.contracts.shared.Metadata;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Builder
@@ -16,6 +17,8 @@ public record EnvironmentCreated(
         String type,
         String status,
         Metadata metadata,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
         long revision
 ) implements IntegrationEvent {
 

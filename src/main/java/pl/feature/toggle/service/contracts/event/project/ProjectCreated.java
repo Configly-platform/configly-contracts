@@ -5,6 +5,7 @@ import pl.feature.toggle.service.contracts.shared.IntegrationEvent;
 import lombok.Builder;
 import pl.feature.toggle.service.contracts.shared.Metadata;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Builder
@@ -12,8 +13,11 @@ public record ProjectCreated(
         EventId eventId,
         UUID projectId,
         String projectName,
+        String projectDescription,
         Metadata metadata,
         String status,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
         long revision
 ) implements IntegrationEvent {
 

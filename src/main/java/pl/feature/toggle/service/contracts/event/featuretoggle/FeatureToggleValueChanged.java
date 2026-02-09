@@ -6,6 +6,7 @@ import pl.feature.toggle.service.contracts.shared.EventId;
 import pl.feature.toggle.service.contracts.shared.IntegrationEvent;
 import pl.feature.toggle.service.contracts.shared.Metadata;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Builder
@@ -18,6 +19,8 @@ public record FeatureToggleValueChanged(
         String type,
         String value,
         Metadata metadata,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
         long revision
 ) implements IntegrationEvent {
 

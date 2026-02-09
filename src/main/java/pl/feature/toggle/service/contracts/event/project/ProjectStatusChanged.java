@@ -6,6 +6,7 @@ import pl.feature.toggle.service.contracts.shared.EventId;
 import pl.feature.toggle.service.contracts.shared.IntegrationEvent;
 import pl.feature.toggle.service.contracts.shared.Metadata;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Builder
@@ -15,6 +16,8 @@ public record ProjectStatusChanged(
         Metadata metadata,
         String status,
         Changes changes,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
         long revision
 ) implements IntegrationEvent {
 
