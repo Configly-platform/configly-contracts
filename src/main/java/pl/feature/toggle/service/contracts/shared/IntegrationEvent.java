@@ -4,4 +4,6 @@ public interface IntegrationEvent {
 
     EventId eventId();
 
+    String correlationId();
+
 }

@@ -30,4 +30,9 @@ public record FeatureToggleCreated(
                 .eventId(EventId.create());
     }
 
+    @Override
+    public String correlationId() {
+        return metadata.correlationId();
+    }
+
 }

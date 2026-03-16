@@ -28,4 +28,9 @@ public record ProjectCreated(
                 .metadata(Metadata.empty())
                 .eventId(EventId.create());
     }
+
+    @Override
+    public String correlationId() {
+        return metadata.correlationId();
+    }
 }
